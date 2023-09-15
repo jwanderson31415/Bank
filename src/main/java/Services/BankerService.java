@@ -7,9 +7,6 @@ public class BankerService {
 
     }
 
-    public StrincheckBankerSignin(String username, String password){
-        if(username.equals("username123")&&(password.equals("password123")))
-            return
-    }
+
 
 }

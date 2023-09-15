@@ -1,11 +1,15 @@
 package Util;
 
+import Model.Customer;
 import Services.CustomerService;
 import Services.BankerService;
 import Services.SigninService;
+import java.util.ArrayList;
+import java.util.List;
 
 import java.util.Scanner;
 
+//General Main Application
 public class Application {
     public static void main(String[] args) {
         CustomerService cs = new CustomerService();
@@ -22,7 +26,20 @@ public class Application {
                 String username = scan.nextLine();
                 System.out.println("Enter Password: ");
                 String password = scan.nextLine();
-                String result = SigninService.checkBankerSignin(username, password);
+                boolean result = SigninService.checkBankerSignin(username, password);
+                if(result){
+                    System.out.println("A) Process Fees");
+                    System.out.println("B) Apply Interest");
+                    System.out.println("C) View Account");
+                    String x = scan.nextLine();
+                    if(x.equals("A")){
+                        System.out.println("Enter name of Customer");
+                        String name = scan.nextLine();
+                        //Customer cust = cs.findCustomer(name);
+                       // System.out.println(cs.getBalance(cust));
+
+                    }
+                }
 
             }
         }
