@@ -16,6 +16,11 @@ public class Application {
         BankerService bs = new BankerService();
         cs.addCustomer("Jason", 1000);
         cs.addCustomer("David", 2000);
+/** Asks users banker or customer, verifies username and password
+ * Then checks to find the customer object to the name requested.
+ * Allows banker to process fees, view account balance, or apply interest to
+ * the customer object
+ */
 
         while(true){
             System.out.println("Banker or Customer?");
@@ -36,7 +41,7 @@ public class Application {
                         System.out.println("Enter name of Customer");
                         String name = scan.nextLine();
                         //Customer cust = cs.findCustomer(name);
-                       // System.out.println(cs.getBalance(cust));
+                        // System.out.println(cs.getBalance(cust));
 
                     }
                 }
